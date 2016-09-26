@@ -1,3 +1,6 @@
+set statusline+=%f
+set guitablabel=%t
+set showtabline=2
 set backspace=indent,eol,start
 set nocompatible
 set smartindent
@@ -16,3 +19,6 @@ set smartcase
 set number
 inoremap jk <ESC>
 nnoremap <leader>c :noh<cr>
+nnoremap <leader>t zt
+nnoremap <leader>g zz
+nnoremap <leader>b zb

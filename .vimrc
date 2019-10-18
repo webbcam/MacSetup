@@ -19,6 +19,7 @@ set smartcase
 set number
 inoremap jk <ESC>
 vnoremap // y/<C-R>"<CR>
+map ,c *<C-O>:%s///gn<CR>
 nnoremap <leader>c :noh<cr>
 nnoremap <leader>t zt
 nnoremap <leader>g zz

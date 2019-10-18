@@ -7,7 +7,7 @@ set smartindent
 set tabstop=4
 set softtabstop=4
 set expandtab
-colorscheme default
+colorscheme desert
 syn on
 set wrap
 set textwidth=79
@@ -18,6 +18,7 @@ set ignorecase
 set smartcase
 set number
 inoremap jk <ESC>
+vnoremap // y/<C-R>"<CR>
 nnoremap <leader>c :noh<cr>
 nnoremap <leader>t zt
 nnoremap <leader>g zz

@@ -17,6 +17,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set number
+set tags=tags;/
 inoremap jk <ESC>
 vnoremap // y/<C-R>"<CR>
 map ,c *<C-O>:%s///gn<CR>

@@ -18,6 +18,7 @@ set ignorecase
 set smartcase
 set number
 set tags=tags;/
+nnoremap <C-]> g<C-]>
 inoremap jk <ESC>
 vnoremap // y/<C-R>"<CR>
 map ,c *<C-O>:%s///gn<CR>

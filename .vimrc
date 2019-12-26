@@ -12,7 +12,7 @@ syn on
 set wrap
 set textwidth=79
 set mouse=a
-set shiftwidth=2
+set shiftwidth=4
 set hlsearch
 set ignorecase
 set smartcase
@@ -27,4 +27,4 @@ nnoremap <leader>t zt
 nnoremap <leader>g zz
 nnoremap <leader>b zb
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e

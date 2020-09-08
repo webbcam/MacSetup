@@ -57,3 +57,31 @@ nmap <leader>gf :CtrlP<CR><C-\>w
 let NERDTreeWinSize=80
 noremap <C-w>. <C-w>>
 noremap <C-w>, <C-w><
+
+" Formatter
+function! Format()
+        echom "Made Pretty"
+        silent! execute 'norm! mz'
+
+        if &ft ==? 'ino' || &ft ==? 'c' || &ft ==? 'cpp'
+                set formatprg=astyle\ --style=linux
+        silent! execute 'norm! gggqG'
+        elseif &ft ==? 'java'
+                set formatprg=astyle\ --mode=java
+        silent! execute 'norm! gggqG'
+        endif
+
+        silent! call RemoveTrailingSpaces()
+        silent! execute 'retab'
+        silent! execute 'gg=G'
+        silent! execute 'norm! `z'
+        set formatprg=
+endfunction
+
+" Remove whitespace
+function! RemoveTrailingSpaces()
+        echom "Trim whitespace"
+        silent! execute '%s/\s\+$//ge'
+        silent! execute 'g/\v^$\n*%$/norm! dd'
+endfunction
+map <F12> :call Format()<CR>
